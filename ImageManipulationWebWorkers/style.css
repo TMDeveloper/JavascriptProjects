@@ -1,0 +1,24 @@
+body {
+  font-family: 'Sans 26px', serif;
+  margin: 5px;
+}
+
+canvas {
+  margin-top: 5px;
+}
+
+.menu {
+  width: 100%;
+}
+
+#image {
+  width: 55%;
+}
+
+#file{
+    margin-bottom: 30px;
+}
+
+.imageLoader{
+    margin-bottom: 30px;
+}

@@ -1,0 +1,281 @@
+@font-face {
+    font-family: myFont;
+    src: url("assets/OpenSans-Bold.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    text-align: center;
+    color: rgb(40,40,40);
+    font-family: myFont;
+    background-size: 100%;
+    background: -webkit-linear-gradient(to bottom, rgb(133, 133, 255), rgb(0, 255, 255)); /* For Chrome 31 and newer */
+    background: -o-linear-gradient(to bottom, rgb(133, 133, 255), rgb(0, 255, 255)); /* For Opera 29 and newer */
+    background: -moz-linear-gradient(to bottom, rgb(133, 133, 255), rgb(0, 255, 255)); /* For Firefox 31 and newer */
+    background: -ms-linear-gradient(to bottom, rgb(133, 133, 255), rgb(0, 255, 255)); /* For IE 10 and newer */
+    background: linear-gradient(to bottom, rgb(133, 133, 255), rgb(0, 255, 255)); /* Standard syntax */
+    
+}
+
+header {
+    margin-top: 20px;
+}
+
+.logo {
+    top: 5px;
+}
+
+#settingsIcon {   
+    width: 22px;
+    height: 22px;
+    margin-left: 5px; 
+    display: inline;
+}
+
+#settingsIcon:hover {
+    cursor:pointer;
+}
+
+#gameIcon {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+#infoText {
+    text-align: justify;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+h3 {
+    margin: 5px;
+    padding: 0;
+    font-size: 25px;
+}
+
+h4 {
+    font-size: 14px;
+}
+
+h5 {
+    font-size: 14px; 
+    text-align: justify;
+}
+
+h6 {
+    font-size: 14px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+#aboutTitle {
+    font-size: 20px;
+}
+
+.buttonIcons {
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;     
+}
+
+.switches {
+    width: 50px;
+    height: 40px;
+    vertical-align: middle;  
+}
+
+.switches:hover {
+    cursor: pointer;   
+}
+
+#likeImage {
+    margin-left: 110px;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
+#likeImage:hover{
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+    -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+    transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+}
+
+#favoriteImage{
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
+#favoriteImage:hover{
+    -webkit-animation-name: hvr-icon-pop;
+    animation-name: hvr-icon-pop;
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}
+
+#contactImage{
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
+#contactImage:hover{
+    -webkit-transform: scale(1.5) rotate(12deg);
+    transform: scale(1.5) rotate(12deg);
+}
+
+.mainMenu {
+    position: relative;
+    top: 20px;
+}
+
+#question, #questionNumber {
+    font-size: 14px;
+}
+
+#gameLevel {
+    position: relative;
+    top: 20px;
+}
+
+#highscores {
+    position: relative;
+    top: 10px;
+}
+
+#highscoresTitle {
+    font-size: 20px;   
+}
+
+.buttons{
+    font-size: 13px;
+    width: 140px;
+    padding: 8px 2px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 5px;
+    border: 2px solid rgb(80,80,80);
+    background-color: white;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.buttons:hover{
+    -webkit-animation-name: hvr-push;
+    animation-name: hvr-push;
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    cursor: pointer;
+}
+
+#saveButton{
+    width:110px;
+}
+
+.answers {
+    font-size: 13px;
+    width: 220px;
+    padding: 8px 2px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 5px;
+    border: 2px solid rgb(80,80,80);
+    background-color: white;
+}
+
+.answers:hover{
+    -webkit-animation-name: hvr-push;
+    animation-name: hvr-push;
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    cursor: pointer;
+}
+
+.footer{
+    position: relative;
+    font-size: 10px;
+    top: 20px;
+}
+
+/*CSS Animations */
+
+/* Push animation*/
+@-webkit-keyframes hvr-push {
+  50% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes hvr-push {
+  50% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+/* Icon Pop */
+@-webkit-keyframes hvr-icon-pop {
+  50% {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+  }
+}
+
+@keyframes hvr-icon-pop {
+  50% {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+  }
+}

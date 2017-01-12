@@ -1,0 +1,78 @@
+<!doctype html>
+<html manifest="QuizApp.appcache">
+    <head>
+        <meta charset="utf-8">
+        <title>TechQuiz</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link rel="stylesheet" href="QuizApp.css">
+    </head>
+    <body>
+        <header>
+            <h3 id="theTitle" class="">TechQuiz</h3><img src="assets/settings.svg" alt="close" id="settingsIcon" class="">
+        </header>
+        <div class="logo">
+        <img src="assets/logo.png" alt="logo" id="logo">
+        </div>
+        <div id="settings" align="center" class="hidden">
+            <br>
+            <p>Game Settings</p>
+            <div>Sound <img src="assets/switch_on.png" alt="soundIcon" id="soundSwitch" class="switches"></div>
+            <div>Music <img src="assets/switch_on.png" alt="musicIcon" id="musicSwitch" class="switches"></div><br>
+            <div class="buttons" id="settingsToMain"><img src="assets/home.svg" alt="mainMenu" class="buttonIcons"> Main menu </div>
+        </div>
+        <div id="menu" align="center" class="" >
+                <div class="buttons" id="newGame"><img src="assets/play.png" alt="newGameIcon" class="buttonIcons"> New game</div>
+                <div class="buttons" id="highscore"><img src="assets/highscore.svg" alt="highscoreIcon" class="buttonIcons">                             Highscore</div>
+                <div class="buttons" id="about"><img src="assets/info.svg" alt="aboutIcon" class="buttonIcons"> About</div>
+                <div class="buttons" id="exitGame"><img src="assets/exit.svg" alt="ExitGameIcon" class="buttonIcons"> Exit game</div>
+        </div>
+        <div id="gameLevel" class="hidden" align="center">
+            <h4>Select a level to start testing your skills!</h4><br>
+            <div class="buttons" id="easy"> Easy</div>
+            <div class="buttons" id="moderate"> Moderate</div>
+            <div class="buttons" id="hard"> Hard</div><br>
+            <div class="buttons" id="levelToMain"><img src="assets/home.svg" alt="mainMenu" class="buttonIcons"> Main menu </div>
+        </div>
+        <div id="questionBoard" class="hidden" align="center">
+                <p id="score">Your score: 0</p>
+                <p id="questionNumber">Question #1</p>
+                <p id="question">Which technology is Samsung using for its smartphones displays?</p>
+                <div class="answers" id="answer1">LED</div>
+                <div class="answers" id="answer2">AMOLED</div>
+                <div class="answers" id="answer3">OLED</div>
+                <div class="answers" id="answer4">IPS</div><br>
+                <div class="buttons" id="questionToMain"><img src="assets/home.svg" alt="mainMenu" class="buttonIcons"> Main menu
+                </div>
+        </div>
+         <div id="quizResults" class="hidden" align="center">
+                <h6 id="result">Congratulations! Your score is 250!</h6>
+                <h6 id="">Please enter your name below and press save to see your name in highscores!</h6>
+                <div><input type="text" id="playerName" size="20" placeholder="Enter your name here"></div><br>
+                <div id="saveButton" class="buttons"><img src="assets/save.svg" alt="mainMenu" class="buttonIcons"> Save score</div>                  <br>
+                <div class="buttons" id="quizResultsToMain"><img src="assets/home.svg" alt="mainMenu" class="buttonIcons"> Main                           menu</div>
+        </div>
+        <div id="highscores" align="center" class="hidden">
+            <p id="highscoresTitle">Highscores</p>
+            <h4 id="1"> </h4>
+            <h4 id="2"> </h4>
+            <h4 id="3"> </h4>
+            <h4 id="4"> </h4>
+            <h4 id="5"> </h4><br>
+            <div class="buttons" id="highscoresToMain"><img src="assets/home.svg" alt="mainMenu" class="buttonIcons"> Main menu </div>
+        </div>
+        <div id="gameInfo" class="hidden" align="center">
+            <br>
+            <p id="aboutTitle"><img src="assets/gameInfo.svg" alt="gameIcon" class="buttonIcons" id="gameIcon"> Game Info</p>
+            <h5 id="infoText">Το TechQuiz είναι ένα παιχνίδι για να αποδείξεις τις γνώσεις σου στην τεχνολογία.                 Κέρδισε την πρώτη θέση στα Highscores και γίνε ειδικός σε θέματα τεχνολογίας!</h5><br>
+            <div class="buttons" id="infoToMain"><img src="assets/home.svg" alt="mainMenu" class="buttonIcons"> Main menu </div>
+            </div>
+        <div class="footer">
+            <p>Learn everything about trending technologies while having fun!</p>
+            <p><img src="assets/contact.svg" alt="contactIcon" id="contactImage" class="buttonIcons"> Contact us 
+            <img src="assets/like.svg" alt="likeIcon" class="buttonIcons" id="likeImage"> Like us</p>
+            <p><img src="assets/favorite.svg" alt="favoriteIcon" id="favoriteImage" class="buttonIcons"> Rate this app!</p>
+        </div>
+      <script src="jquery.js"></script>
+      <script src="QuizApp.js"></script>
+    </body>
+</html>

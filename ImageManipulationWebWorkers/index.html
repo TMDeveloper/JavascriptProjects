@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <title>Web Workers example</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="header text-center">
+        <h2>Image Manipulator</h2><br>
+        <h4 id="timer">Time to complete process will be posted here!</h4>
+    </div> <br>
+    <div class="container text-center">
+      <div class="menu" id="image-manipulator">
+        <label class="btn btn-default btn-file"> Browse for picture <input type="file" class="hidden imageLoader"> </label> <br><br>
+        <div id="options" class="form-group">
+        <h4>Select the number of web workers for proccessing </h4>
+        <select id="workersNum" size="1" name="numOfWorkers">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+        </select>
+        </div> <br>
+        <h4>Press button to apply effect:</h4>
+        <button id="invert" class="btn btn-primary">Invert</button>
+        <button id="chroma" class="btn btn-primary">Chroma</button>
+        <button id="sepia" class="btn btn-primary">Sepia</button>
+        <button id="greyscale" class="btn btn-primary">Greyscale</button>
+        <button id="vibrant" class="btn btn-primary">Vibrant</button>
+        <button id="revert" class="btn btn-primary">Revert to Original</button>
+        <canvas id="image"></canvas> 
+      </div>
+    </div>
+    <script src="custom.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  </body>
+</html>
