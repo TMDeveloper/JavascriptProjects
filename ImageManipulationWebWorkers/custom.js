@@ -26,6 +26,11 @@
   function revertImage () {
         return ctx.putImageData(original, 0, 0);
   };
+        
+    $("#downloadLink").click(function(){
+        this.href = canvas.toDataURL('image/jpeg');
+        this.download = "newPic.jpeg";
+    })
     
   function manipulateImage(type){
         

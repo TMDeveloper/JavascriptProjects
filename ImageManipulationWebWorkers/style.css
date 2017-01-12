@@ -22,3 +22,11 @@ canvas {
 .imageLoader{
     margin-bottom: 30px;
 }
+
+#downloadBtn{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border: ;
+    border-radius: 2px solid black;
+}
+

@@ -1,11 +1,12 @@
 <!DOCTYPE HTML>
 <html lang="en">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf8" name="viewport" content="width=device-width, initial-scale=1">
   <head>
     <title>Web Workers example</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   </head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <body>
     <div class="header text-center">
         <h2>Image Manipulator</h2><br>
@@ -13,7 +14,7 @@
     </div> <br>
     <div class="container text-center">
       <div class="menu" id="image-manipulator">
-        <label class="btn btn-default btn-file"> Browse for picture <input type="file" class="hidden imageLoader"> </label> <br><br>
+        <label class="btn btn-primary btn-file"> Browse for picture <input type="file" class="hidden imageLoader"> </label> <br><br>
         <div id="options" class="form-group">
         <h4>Select the number of web workers for proccessing </h4>
         <select id="workersNum" size="1" name="numOfWorkers">
@@ -35,10 +36,12 @@
         <button id="greyscale" class="btn btn-primary">Greyscale</button>
         <button id="vibrant" class="btn btn-primary">Vibrant</button>
         <button id="revert" class="btn btn-primary">Revert to Original</button>
-        <canvas id="image"></canvas> 
+        <canvas id="image"></canvas> <br>
+       <div id="downloadBtn">
+            <a id="downloadLink" class="btn btn-success" download="YourFileName.jpg">Download as image</a>
+       </div>
       </div>
     </div>
     <script src="custom.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   </body>
 </html>
