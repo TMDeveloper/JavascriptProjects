@@ -1,0 +1,20 @@
+<html>
+<head>
+<title>WikiSearchApp</title>
+</head>
+<body ng-app="WikiApp">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+<script src="script.js"></script>
+<div class="container" align="center" ng-controller="MainController as MainCtrl">
+	<div class="row">
+    <h2>Wikipedia Viewer App</h2>
+        <form ng-submit="MainCtrl.getResults();">
+        <input type="text" class="form-control" style="width: 50%;" id="searchBar" ng-model="MainCtrl.searchText" name="search" placeholder="Search for an article..."><button id="searchBtn" style="font-size: 12px;" class="btn btn-primary glyphicon glyphicon-search" ng-click="MainCtrl.getResults();"> Search</button>
+        </form>
+        <a class="btn btn-primary" style="font-size: 14px;" href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">Get a random article</a>
+        </div><br>
+        <search-results results="MainCtrl.results"></search-results>
+</div>
+</body>
+</html>
