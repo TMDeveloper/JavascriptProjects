@@ -1,0 +1,16 @@
+body { 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+
+span{
+    font-size: 20px;
+    font-weight: bold;
+}
+#footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
