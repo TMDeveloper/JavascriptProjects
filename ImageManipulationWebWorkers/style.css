@@ -1,6 +1,14 @@
 body {
   font-family: 'Sans 26px', serif;
   margin: 5px;
+  background-color: #1E88E5;
+}
+
+.jumbotron{
+    margin-left: 25%; 
+    margin-right: 25%; 
+    margin-top: 10px;
+    border-radius: 20px; 
 }
 
 canvas {
@@ -12,7 +20,8 @@ canvas {
 }
 
 #image {
-  width: 55%;
+  width: 90%;
+  border-radius: 10px;
 }
 
 #file{

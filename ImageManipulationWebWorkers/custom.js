@@ -5,6 +5,7 @@
   canvas = document.querySelector('#image'), 
   ctx = canvas.getContext('2d'), 
   timer =  document.querySelector('#timer');
+  document.getElementById("coresNum").innerHTML = self.navigator.hardwareConcurrency;
     
   function handleImage(e) {
     var reader = new FileReader();
