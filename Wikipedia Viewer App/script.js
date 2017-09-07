@@ -32,7 +32,6 @@ function WikiSearchService($http, ApiBasePath) {
     var page = 'https://en.wikipedia.org/?curid=';
 
     service.getResults = function (searchTerm) {
-        console.log(searchTerm);
         return $http({
             restrict: 'E',
             method: 'GET',
@@ -55,14 +54,13 @@ function WikiSearchService($http, ApiBasePath) {
 };
     
 function ResultsDirective () {
-   var ddo = {
-    restrict: 'E',
-    templateUrl: 'resultsView.html',
-    scope: {
-      results: '<'
-    }
-  };
-  return ddo;
+   return {
+        restrict: 'E',
+        templateUrl: 'resultsView.html',
+        scope: {
+        results: '<'
+        }
+   };
 }
     
 })();
