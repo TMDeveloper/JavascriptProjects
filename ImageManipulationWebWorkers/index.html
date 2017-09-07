@@ -32,12 +32,14 @@
         </div>
         <h6><b>Hint: Don't use more workers than the number of your logical cores which is: </b><b id="coresNum"></b></h6> <br>
         <h4>Press button to apply effect:</h4>
-        <button id="invert" class="btn btn-primary">Invert</button>
-        <button id="chroma" class="btn btn-primary">Chroma</button>
-        <button id="sepia" class="btn btn-primary">Sepia</button>
-        <button id="greyscale" class="btn btn-primary">Greyscale</button>
-        <button id="vibrant" class="btn btn-primary">Vibrant</button>
-        <button id="revert" class="btn btn-primary">Revert to Original</button>
+        <div class="btn-group">
+            <button id="invert" class="btn btn-primary">Invert</button>
+            <button id="chroma" class="btn btn-primary">Chroma</button>
+            <button id="sepia" class="btn btn-primary">Sepia</button>
+            <button id="greyscale" class="btn btn-primary">Greyscale</button>
+            <button id="vibrant" class="btn btn-primary">Vibrant</button>
+            <button id="revert" class="btn btn-primary">Revert to Original</button>
+        </div>
         <canvas id="image"></canvas> <br>
        <div id="downloadBtn">
             <a id="downloadLink" class="btn btn-success" download="YourFileName.jpg">Download as image</a>

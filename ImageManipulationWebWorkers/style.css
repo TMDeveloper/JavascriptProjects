@@ -5,8 +5,8 @@ body {
 }
 
 .jumbotron{
-    margin-left: 25%; 
-    margin-right: 25%; 
+    margin-left: 10%; 
+    margin-right: 10%; 
     margin-top: 10px;
     border-radius: 20px; 
 }
@@ -37,5 +37,25 @@ canvas {
     margin-bottom: 30px;
     border: ;
     border-radius: 2px solid black;
+}
+
+@media screen and (max-width: 641px){
+    .jumbotron {
+        margin-left: 0; 
+        margin-right: 0; 
+        margin-top: 0;
+    }
+    
+    .btn{
+        display: block;
+    }
+
+}
+
+@media screen and (max-width: 517px) {
+    .btn-group{
+    margin-left: 11%;
+    }
+
 }
 
