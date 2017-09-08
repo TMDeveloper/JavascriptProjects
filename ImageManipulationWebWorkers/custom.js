@@ -4,7 +4,8 @@
   imageLoader = document.querySelector('.imageLoader'),
   canvas = document.querySelector('#image'), 
   ctx = canvas.getContext('2d'), 
-  timer =  document.querySelector('#timer');
+  timer =  document.querySelector('#timer'),
+  downloadBtn = document.getElementById("downloadLink");
   document.getElementById("coresNum").innerHTML = self.navigator.hardwareConcurrency;
     
   function handleImage(e) {
@@ -28,10 +29,12 @@
         return ctx.putImageData(original, 0, 0);
   };
         
-    $("#downloadLink").click(function(){
-        this.href = canvas.toDataURL('image/jpeg');
-        this.download = "newPic.jpeg";
-    })
+    downloadBtn.addEventListener('click', downloadImage, false);
+    
+    function downloadImage () {  
+            downloadBtn.href = canvas.toDataURL('image/jpeg');
+            downloadBtn.download = "newPic.jpeg";   
+    };
     
   function manipulateImage(type){
         
