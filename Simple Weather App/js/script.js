@@ -37,7 +37,7 @@ var openWeatherMap = "http://api.openweathermap.org/data/2.5/weather";
             }
         });
     });
-    };
+    }
     $("button").click(function(){
         var C = $("#temp").text();
         var F = C*9/5 + 32;

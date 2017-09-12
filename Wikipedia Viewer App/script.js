@@ -23,7 +23,7 @@ function MainController(WikiSearchService){
 			console.log("Something went wrong...", error);
 		});
     };
-};
+}
 
 WikiSearchService.$inject = ["$http", "APIBasePath"];
 function WikiSearchService($http, ApiBasePath) {

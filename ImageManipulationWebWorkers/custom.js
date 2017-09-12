@@ -25,7 +25,7 @@
       img.src = event.target.result;
     };
     reader.readAsDataURL(e.target.files[0]);
-  };
+  }
 
   imageLoader.addEventListener("change", handleImage, false);
 
@@ -122,7 +122,6 @@
           }//End of try
             catch (e) {
                 throw new ManipulationException("Image manipulation error");
-                postMessage("Image manipulation error");
             } 
         }//End of else   
     };

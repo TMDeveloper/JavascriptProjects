@@ -47,7 +47,7 @@ var currentQuestion, questionNum = 1, correct, score = 0, playerName, firstQuest
         
         function saveScore() {
             localStorage.setItem("scores", JSON.stringify(highScoresArray));
-        };
+        }
     
 //Shows the five biggest scores inserted to localstorage object (Sorted with descending order)
         function loadScores() {
