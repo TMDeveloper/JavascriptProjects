@@ -7,8 +7,10 @@
   timer =  document.querySelector("#timer"),
   downloadBtn = document.getElementById("downloadLink");
     
-  if(self.navigator.hardwareConcurrency != undefined)
-  document.getElementById("coresNum").innerHTML = self.navigator.hardwareConcurrency;
+  if(self.navigator.hardwareConcurrency !== undefined){
+        document.getElementById("coresNum").innerHTML = self.navigator.hardwareConcurrency;
+  }
+
     
   function handleImage(e) {
     var reader = new FileReader();
@@ -119,12 +121,8 @@
               
           }//End of try
             catch (e) {
-                function ManipulationException(message) {
-                this.name = "ManipulationException";
-                this.message = message;
-                };
                 throw new ManipulationException("Image manipulation error");
-                postMessage("undefined");
+                postMessage("Image manipulation error");
             } 
         }//End of else   
     };

@@ -1,7 +1,7 @@
 (function () {
  "use strict";
     
-angular.module("WikiApp", [])
+var app = angular.module("WikiApp", [])
 .controller("MainController", MainController)
 .service("WikiSearchService", WikiSearchService)
 .directive("searchResults", ResultsDirective)
@@ -22,7 +22,7 @@ function MainController(WikiSearchService){
         .catch(function(error){
 			console.log("Something went wrong...", error);
 		});
-    }
+    };
 };
 
 WikiSearchService.$inject = ["$http", "APIBasePath"];
@@ -43,7 +43,7 @@ function WikiSearchService($http, ApiBasePath) {
             var results = [];
             angular.forEach(dataArray, function(v,k)  {
                 results.push({title: v.title, body: v.extract, page: page + v.pageid});
-            })
+            });
             return results;
         })
         .catch(function(error){

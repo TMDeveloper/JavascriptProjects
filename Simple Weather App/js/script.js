@@ -12,7 +12,6 @@ var openWeatherMap = "http://api.openweathermap.org/data/2.5/weather";
             $("#temp").text(weather.main.temp);
             $("#humidity").text(weather.main.humidity + "% ");
             $("#wind").text(weather.wind.speed + "Km/h");
-            console.log(weather);
 
           var description = weather.weather[0].main;
            
@@ -37,7 +36,7 @@ var openWeatherMap = "http://api.openweathermap.org/data/2.5/weather";
                 $("body").css("background", "url(https://cdn.pixabay.com/photo/2014/04/05/11/39/rain-316579_960_720.jpg) no-repeat fixed center");
             }
         });
-    })
+    });
     };
     $("button").click(function(){
         var C = $("#temp").text();
