@@ -96,7 +96,7 @@
     
   function manipulateImage(type){
         
-        var start = new Date(), pixel, index, imageData, segmentLength, worker,
+        var start = new Date(), pixel, index, imageData, worker,
         finished = 0,
         workersNum = document.getElementById("workersNum"),
         workersCount = workersNum.options[workersNum.selectedIndex].value,

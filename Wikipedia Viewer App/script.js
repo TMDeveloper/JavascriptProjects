@@ -50,7 +50,7 @@ function WikiSearchService($http, ApiBasePath) {
             console.log("Something went wrong...");
         
         });
-    }
+    };
 };
     
 function ResultsDirective () {
