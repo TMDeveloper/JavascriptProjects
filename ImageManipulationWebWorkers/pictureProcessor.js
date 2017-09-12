@@ -1,54 +1,3 @@
-self.onmessage = function (e) {
-  var effect = e.data.cmd;
-  var imageData = e.data.data;
-  var index = e.data.index;
-  var segmentLength = e.data.length;
-  var pixel, r, g, b, a;
-
-       try {
-         for (var i = 0; i < segmentLength; i += 4) {
-            r = imageData.data[i];
-            g = imageData.data[i + 1];
-            b = imageData.data[i + 2];
-            a = imageData.data[i + 3];
-            
-        switch (effect) {
-        case "invert":
-            pixel = makePixelInverted(r, g, b, a);
-            break;
-                
-        case "sepia":
-            pixel = makePixelSepia(r, g, b, a);
-            break;
-                
-        case "greyscale":
-            pixel = makePixelGreyScale(r, g, b, a);
-            break;
-                
-        case "vibrant":
-            pixel = makePixelVibrant(r, g, b, a);
-            break;
-                        
-        case "chroma":
-            pixel = makePixelChroma(r, g, b, a);
-            break;
-        }
-            imageData.data[i + 0] = pixel[0];
-            imageData.data[i + 1] = pixel[1];
-            imageData.data[i + 2] = pixel[2];
-            imageData.data[i + 3] = pixel[3];
-        }
-           
-        self.postMessage({result: imageData, index: index});
-        self.close();
-       } catch (e) {
-        function ManipulationException(message) {
-            this.name = "ManipulationException";
-            this.message = message;
-        }
-        throw new ManipulationException("Image manipulation error");
-        }
-        
    function makePixelInverted(r, g, b, a) {
     r = 255 - r;
     g = 255 - g;
@@ -101,6 +50,54 @@ self.onmessage = function (e) {
     bs = b + (amt * (mx - b));
     return [rs, gs, bs, a];
   }; 
+
+self.onmessage = function (e) {
+  var effect = e.data.cmd;
+  var imageData = e.data.data;
+  var index = e.data.index;
+  var segmentLength = e.data.length;
+  var pixel, r, g, b, a;
+    
+       try {
+         for (var i = 0; i < segmentLength; i += 4) {
+            r = imageData.data[i];
+            g = imageData.data[i + 1];
+            b = imageData.data[i + 2];
+            a = imageData.data[i + 3];
+            
+        switch (effect) {
+        case "invert":
+            pixel = makePixelInverted(r, g, b, a);
+            break;
+                
+        case "sepia":
+            pixel = makePixelSepia(r, g, b, a);
+            break;
+                
+        case "greyscale":
+            pixel = makePixelGreyScale(r, g, b, a);
+            break;
+                
+        case "vibrant":
+            pixel = makePixelVibrant(r, g, b, a);
+            break;
+                        
+        case "chroma":
+            pixel = makePixelChroma(r, g, b, a);
+            break;
+        }
+            imageData.data[i + 0] = pixel[0];
+            imageData.data[i + 1] = pixel[1];
+            imageData.data[i + 2] = pixel[2];
+            imageData.data[i + 3] = pixel[3];
+        }
+           
+        self.postMessage({result: imageData, index: index});
+        self.close();
+        } 
+        catch (e) {
+            throw new ManipulationException("Image manipulation error");
+         }
 };
 
     

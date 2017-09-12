@@ -39,7 +39,7 @@ function WikiSearchService($http, ApiBasePath) {
         })
         .then(function (result) {
             var dataArray = [];
-            var dataArray = result.data.query.pages;
+            dataArray = result.data.query.pages;
             var results = [];
             angular.forEach(dataArray, function(v,k)  {
                 results.push({title: v.title, body: v.extract, page: page + v.pageid});

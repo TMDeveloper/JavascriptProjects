@@ -51,7 +51,7 @@ var currentQuestion, questionNum = 1, correct, score = 0, playerName, firstQuest
     
 //Shows the five biggest scores inserted to localstorage object (Sorted with descending order)
         function loadScores() {
-            var string1 = localStorage.getItem("scores"), i;
+            var string1 = localStorage.getItem("scores");
             
             if (string1) 
             {
@@ -77,7 +77,7 @@ var currentQuestion, questionNum = 1, correct, score = 0, playerName, firstQuest
             activeQuestionsList.splice(currentQuestion, 1);
             questionNum++;
          
-        if(firstQuestion == false){
+        if(firstQuestion === false){
             $("#questionNumber").fadeOut();
             $("#question").fadeOut();
             $("#answer1").fadeOut();
@@ -127,24 +127,24 @@ var currentQuestion, questionNum = 1, correct, score = 0, playerName, firstQuest
 //Checks given answer
     $("#answer1, #answer2, #answer3, #answer4").on("click", function (ev){
         ev.preventDefault();
-        if(ev.target.textContent == correct && activeQuestionsList.length > 0)
+        if(ev.target.textContent === correct && activeQuestionsList.length > 0)
         {
             score+=30;
             $("#score").text("Score: "+score).fadeIn();
             getQuestion();
         }
-        else if (ev.target.textContent != correct && activeQuestionsList.length > 0)
+        else if (ev.target.textContent !== correct && activeQuestionsList.length > 0)
         {
             getQuestion();
         }
-        else if(ev.target.textContent == correct && activeQuestionsList.length == 0)
+        else if(ev.target.textContent === correct && activeQuestionsList.length == 0)
         {
             score+=30;
             $("#score").text("Score: "+score).fadeIn();
             getResults();
             
         }
-        else if(ev.target.textContent != correct && activeQuestionsList.length == 0)
+        else if(ev.target.textContent !== correct && activeQuestionsList.length == 0)
         {
             getResults();
         }
@@ -182,7 +182,7 @@ var currentQuestion, questionNum = 1, correct, score = 0, playerName, firstQuest
     
     $("#soundSwitch").on("click", function (ev){
         ev.preventDefault();
-        if ($(this).attr("class") == "switches") {
+        if ($(this).attr("class") === "switches") {
             this.src = this.src.replace("_on","_off");
         }   
         else {
@@ -193,7 +193,7 @@ var currentQuestion, questionNum = 1, correct, score = 0, playerName, firstQuest
     
     $("#musicSwitch").on("click", function (ev){
         ev.preventDefault();
-        if ($(this).attr("class") == "switches") {
+        if ($(this).attr("class") === "switches") {
             this.src = this.src.replace("_on","_off");
         }   
         else {
