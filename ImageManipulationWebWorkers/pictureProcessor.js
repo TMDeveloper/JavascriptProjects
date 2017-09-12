@@ -13,23 +13,23 @@ self.onmessage = function (e) {
             a = imageData.data[i + 3];
             
         switch (effect) {
-        case 'invert':
+        case "invert":
             pixel = makePixelInverted(r, g, b, a);
             break;
                 
-        case 'sepia':
+        case "sepia":
             pixel = makePixelSepia(r, g, b, a);
             break;
                 
-        case 'greyscale':
+        case "greyscale":
             pixel = makePixelGreyScale(r, g, b, a);
             break;
                 
-        case 'vibrant':
+        case "vibrant":
             pixel = makePixelVibrant(r, g, b, a);
             break;
                         
-        case 'chroma':
+        case "chroma":
             pixel = makePixelChroma(r, g, b, a);
             break;
         }
@@ -46,8 +46,8 @@ self.onmessage = function (e) {
             this.name = "ManipulationException";
             this.message = message;
         };
-        throw new ManipulationException('Image manipulation error');
-        postMessage(undefined);
+        throw new ManipulationException("Image manipulation error");
+        postMessage("undefined");
         }
         
    function makePixelInverted(r, g, b, a) {

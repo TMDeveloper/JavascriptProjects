@@ -1,11 +1,13 @@
 (function () {
 
   var original,
-  imageLoader = document.querySelector('.imageLoader'),
-  canvas = document.querySelector('#image'), 
-  ctx = canvas.getContext('2d'), 
-  timer =  document.querySelector('#timer'),
+  imageLoader = document.querySelector(".imageLoader"),
+  canvas = document.querySelector("#image"), 
+  ctx = canvas.getContext("2d"), 
+  timer =  document.querySelector("#timer"),
   downloadBtn = document.getElementById("downloadLink");
+    
+  if(self.navigator.hardwareConcurrency != undefined)
   document.getElementById("coresNum").innerHTML = self.navigator.hardwareConcurrency;
     
   function handleImage(e) {
@@ -23,16 +25,16 @@
     reader.readAsDataURL(e.target.files[0]);
   };
 
-  imageLoader.addEventListener('change', handleImage, false);
+  imageLoader.addEventListener("change", handleImage, false);
 
   function revertImage () {
         return ctx.putImageData(original, 0, 0);
   };
         
-    downloadBtn.addEventListener('click', downloadImage, false);
+    downloadBtn.addEventListener("click", downloadImage, false);
     
     function downloadImage () {  
-            downloadBtn.href = canvas.toDataURL('image/jpeg');
+            downloadBtn.href = canvas.toDataURL("image/jpeg");
             downloadBtn.download = "newPic.jpeg";   
     };
     
@@ -84,23 +86,23 @@
                 var a = imageData.data[i + 3];
             
               switch (type) {
-                case 'invert':
+                case "invert":
                     pixel = makePixelInverted(r, g, b, a);
                     break;
                 
-                case 'sepia':
+                case "sepia":
                     pixel = makePixelSepia(r, g, b, a);
                     break;
                 
-                case 'greyscale':
+                case "greyscale":
                     pixel = makePixelGreyScale(r, g, b, a);
                     break;
                 
-                case 'vibrant':
+                case "vibrant":
                     pixel = makePixelVibrant(r, g, b, a);
                     break;
                         
-                case 'chroma':
+                case "chroma":
                     pixel = makePixelChroma(r, g, b, a);
                     break;
               }
@@ -121,33 +123,33 @@
                 this.name = "ManipulationException";
                 this.message = message;
                 };
-                throw new ManipulationException('Image manipulation error');
-                postMessage(undefined);
+                throw new ManipulationException("Image manipulation error");
+                postMessage("undefined");
             } 
         }//End of else   
     };
     
-    document.querySelector('#invert').onclick = function () {
-    manipulateImage('invert');
+    document.querySelector("#invert").onclick = function () {
+    manipulateImage("invert");
     };
     
-    document.querySelector('#sepia').onclick = function () {
-    manipulateImage('sepia');
+    document.querySelector("#sepia").onclick = function () {
+    manipulateImage("sepia");
     };
     
-    document.querySelector('#chroma').onclick = function () {
-    manipulateImage('chroma');
+    document.querySelector("#chroma").onclick = function () {
+    manipulateImage("chroma");
     };
     
-    document.querySelector('#greyscale').onclick = function () {
-    manipulateImage('greyscale');
+    document.querySelector("#greyscale").onclick = function () {
+    manipulateImage("greyscale");
     };
     
-    document.querySelector('#vibrant').onclick = function () {
-    manipulateImage('vibrant');
+    document.querySelector("#vibrant").onclick = function () {
+    manipulateImage("vibrant");
     };
     
-    document.querySelector('#revert').onclick = function () {
+    document.querySelector("#revert").onclick = function () {
     revertImage();
     };
     
