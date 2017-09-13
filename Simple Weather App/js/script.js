@@ -1,4 +1,4 @@
-var openWeatherMap = "https://api.openweathermap.org/data/2.5/weather";
+var openWeatherMap = "http://api.openweathermap.org/data/2.5/weather";
     if (window.navigator && window.navigator.geolocation) {
         window.navigator.geolocation.getCurrentPosition(function(position) {
         $.getJSON(openWeatherMap, {
@@ -16,19 +16,19 @@ var openWeatherMap = "https://api.openweathermap.org/data/2.5/weather";
           var description = weather.weather[0].main;
             console.log(description);
            
-            if(description.indexOf("Clouds") > -1 || description.indexOf("few clouds") > -1 || description.indexOf("Cloudy") > -1){
+            if(description.indexOf("Clouds") > -1 || description.indexOf("Few clouds") > -1 || description.indexOf("Cloudy") > -1){
                 $("#weatherIcon").attr("src", "images/partly_cloudy.png");
                 $("body").css("background", "url(images/cloudy_day.jpg) no-repeat fixed center");
             }
-            else if(description.indexOf("Sun") > -1 || description.indexOf("Sunny day") > -1 || description.indexOf("sunny") > -1){
+            else if(description.indexOf("Sun") > -1 || description.indexOf("Clear") > -1 || description.indexOf("Sunny") > -1){
                 $("#weatherIcon").attr("src", "images/sunny.png");
                 $("body").css("background", "url(images/sunny_day.jpg) no-repeat fixed center");
             }
-            else if(description.indexOf("Snow") > -1 || description.indexOf("snowing") > -1){
+            else if(description.indexOf("Snow") > -1 || description.indexOf("Snowing") > -1){
                 $("#weatherIcon").attr("src", "images/snow.png");
                 $("body").css("background", "url(images/snow_day.jpg) no-repeat fixed center");
             }
-            else if(description.indexOf("Rain") > -1 || description.indexOf("rainy") >-1 ){
+            else if(description.indexOf("Rain") > -1 || description.indexOf("Rainy") >-1 ){
                 $("#weatherIcon").attr("src", "images/rain_cloudy.png");
                 $("body").css("background", "url(images/rainy_day.jpg) no-repeat fixed center");
             }
