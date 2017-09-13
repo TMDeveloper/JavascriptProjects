@@ -1,4 +1,4 @@
-var openWeatherMap = "http://api.openweathermap.org/data/2.5/weather";
+var openWeatherMap = "https://api.openweathermap.org/data/2.5/weather";
     if (window.navigator && window.navigator.geolocation) {
         window.navigator.geolocation.getCurrentPosition(function(position) {
         $.getJSON(openWeatherMap, {
@@ -14,26 +14,23 @@ var openWeatherMap = "http://api.openweathermap.org/data/2.5/weather";
             $("#wind").text(weather.wind.speed + "Km/h");
 
           var description = weather.weather[0].main;
+            console.log(description);
            
-            if(description.indexOf("Clouds") > -1){
-                $("#weatherIcon").attr("src", "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png");
-                $("body").css("background", "url(http://emanbilisim.com/weather4/javascript-premium-weather-widget/bins/assets/bg-cloudy-day.jpg) no-repeat fixed center");
+            if(description.indexOf("Clouds") > -1 || description.indexOf("few clouds") > -1 || description.indexOf("Cloudy") > -1){
+                $("#weatherIcon").attr("src", "images/partly_cloudy.png");
+                $("body").css("background", "url(images/cloudy_day.jpg) no-repeat fixed center");
             }
-            else if(description.indexOf("Cloudy") > -1){
-                $("#weatherIcon").attr("src", "https://ssl.gstatic.com/onebox/weather/64/cloudy.png");
-                $("body").css("background", "url(http://emanbilisim.com/weather4/javascript-premium-weather-widget/bins/assets/bg-cloudy-day.jpg) no-repeat fixed center");
+            else if(description.indexOf("Sun") > -1 || description.indexOf("Sunny day") > -1 || description.indexOf("sunny") > -1){
+                $("#weatherIcon").attr("src", "images/sunny.png");
+                $("body").css("background", "url(images/sunny_day.jpg) no-repeat fixed center");
             }
-            else if(description.indexOf("Sun") > -1){
-                $("#weatherIcon").attr("src", "https://ssl.gstatic.com/onebox/weather/64/sunny.png");
-                $("body").css("background", "url(http://cdn.weatheravenue.com/img/background/background.jpg) no-repeat fixed center");
+            else if(description.indexOf("Snow") > -1 || description.indexOf("snowing") > -1){
+                $("#weatherIcon").attr("src", "images/snow.png");
+                $("body").css("background", "url(images/snow_day.jpg) no-repeat fixed center");
             }
-            else if(description.indexOf("Snow") > -1){
-                $("#weatherIcon").attr("src", "https://ssl.gstatic.com/onebox/weather/64/snow.png");
-                $("body").css("background", "url(http://www.wallpaperawesome.com/wallpapers-awesome/wallpapers-weather-clouds-tornado-rain-cyclone-flashlights-awesome/wallpaper-snowing-in-the-trees-weather.jpg) no-repeat fixed center");
-            }
-            else if(description.indexOf("Rain")){
-                $("#weatherIcon").attr("src", "https://ssl.gstatic.com/onebox/weather/64/rain_s_cloudy.png");
-                $("body").css("background", "url(https://cdn.pixabay.com/photo/2014/04/05/11/39/rain-316579_960_720.jpg) no-repeat fixed center");
+            else if(description.indexOf("Rain") > -1 || description.indexOf("rainy") >-1 ){
+                $("#weatherIcon").attr("src", "images/rain_cloudy.png");
+                $("body").css("background", "url(images/rainy_day.jpg) no-repeat fixed center");
             }
         });
     });
