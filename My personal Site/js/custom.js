@@ -19,15 +19,15 @@ jQuery(document).ready(function($) {
 			$("html, body").animate({ scrollTop: $("#ContactPage").offset().top }, 1000);
 				return false;
 		});
-        
+            
         //scroll to top
-		$("#scrollup").click(function(){
+		$(".scrollup").click(function(){
 			$("html, body").animate({ scrollTop: 0 }, 1000);
 				return false;
 		});
     
         //scroll to top
-		$(".scrollup").click(function(){
+		$(".scrollTop").click(function(){
 			$("html, body").animate({ scrollTop: 0 }, 1000);
 				return false;
 		});
