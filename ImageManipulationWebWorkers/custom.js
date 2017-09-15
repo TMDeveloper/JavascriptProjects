@@ -175,7 +175,12 @@
               
           }//End of try
             catch (e) {
-                throw new ManipulationException("Image manipulation error");
+                function ManipulationException(message) {
+                this.name = "ManipulationException";
+                this.message = message;
+                console.log(name + " " + message);
+                };
+            throw new ManipulationException('Image manipulation error');
             } 
         }//End of else   
     };
