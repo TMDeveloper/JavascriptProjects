@@ -93,16 +93,15 @@ self.onmessage = function (e) {
         }
            
         self.postMessage({result: imageData, index: index});
-        self.close();
         } 
         catch (e) {
                 function ManipulationException(message) {
                 this.name = "ManipulationException";
                 this.message = message;
-                console.log(name + " " + message);
                 };
         throw new ManipulationException('Image manipulation error');
-        } 
+        }
+        self.close();
 };
 
     
