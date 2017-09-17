@@ -1,5 +1,7 @@
 (function () {
 
+"use strict";
+
   var original,
   imageLoader = document.querySelector(".imageLoader"),
   canvas = document.querySelector("#image"), 
@@ -208,4 +210,4 @@
     revertImage();
     };
     
-})();
+}());
