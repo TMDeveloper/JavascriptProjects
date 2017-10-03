@@ -1,0 +1,164 @@
+.logo{
+    text-align: center;
+    width: 32px;
+    height: 32px;
+    margin-bottom: 1%;
+}
+body{
+    width: 100%;
+}
+.main-container{
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    height: 100%; 
+    text-align: center;
+    font-size: 14px;
+}
+
+.hidden{
+    display: none;
+}
+
+input[type=text] {
+    background: url("search.png") center left no-repeat;
+    padding-left:25px; 
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    -webkit-transition: width 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out;
+}
+input[type=text]:focus {
+    width: 60%;
+}
+
+p{
+    font-size: 1em!important;
+}
+
+#spinner{
+    width:10%;
+    height:auto;
+}
+
+#selectLabel{
+display: inline;
+}
+
+#sortByList{
+    display: inline;
+    width: 100px;
+    height: 5%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#scrollTopBtn{
+    position: fixed;
+    top:94%;
+    right: 3%;
+    width: 42px;
+    float: right;
+    margin-bottom: 1%;
+}
+
+#sourcesCards{
+    margin-top: 3%;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+#articleCards{
+    margin-left: auto;
+    margin-right: auto;
+    width:95%;
+}
+
+.card {
+    margin-top: 3%;
+    text-align: left;
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+  }
+  
+  .card-block {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    padding: 1.25rem;
+  }
+  
+.card-title {
+  color: black;
+  margin-bottom: 0.75rem;
+}
+
+.card-text{
+      color: black;
+}
+
+.card-text:last-child {
+  margin-bottom: 0;
+  text-align: justify center;
+}
+
+.card-link:hover {
+  text-decoration: none;
+}
+
+.card-img-top {
+  width: 100%;
+  border-top-right-radius: calc(0.25rem - 1px);
+  border-top-left-radius: calc(0.25rem - 1px);
+}
+
+@media only screen and (max-width: 770px) {
+#sourcesCards{
+    width: 95%;
+}
+}
+
+@media only screen and (max-width: 750px) {
+    #spinner{
+        width:15%;
+        height:auto;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .card-title{
+        font-size: 1.2em;
+    }
+    .card-text{
+        font-size: 0.9em;
+    }
+}
+
+@media only screen and (max-width: 475px) {
+    .btn {
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+    #spinner{
+        width:30%;
+        height:auto;
+    }
+}

@@ -1,0 +1,46 @@
+<html>
+<head>
+<link rel="icon" href="favicon.png" type="image/png" sizes="32x32">
+<title>RSS News Feed App</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link href="style/style.css" rel="stylesheet">
+</head>
+<body ng-app="NewsFeedApp" ng-controller="MainController as ctrl">
+<div class="main-container">
+<div><img class="logo" src="favicon.png">
+<h4 id="appTitle">This is an RSS News Feed App</h4> </div>
+<h5>Find the most popular articles of your interest!</h5> <br>
+<!--<div class="searchBar">
+    <input type="text" class="form-control" placeholder="Search">
+</div><br>-->
+<h5 class="categorySelect">Select Your Feed Category</h5><br>
+<div class="btn-group" role="group" aria-label="category">
+  <button class="btn btn-default" ng-click="ctrl.getSources('Business')">Business</button>
+  <button class="btn btn-default" ng-click="ctrl.getSources('Sport')">Sport</button>
+  <button class="btn btn-default" ng-click="ctrl.getSources('Entertainment')">Entertainment</button>
+  <button class="btn btn-default" ng-click="ctrl.getSources('General')">General</button>
+  <button class="btn btn-default" ng-click="ctrl.getSources('Music')">Music</button>
+  <button class="btn btn-default" ng-click="ctrl.getSources('Technology')">Technology</button>
+</div><br><br>
+<div class="form-group">
+    <label id="selectLabel" for="sortByList">Sort by:</label>
+    <select class="form-control" id="sortByList" ng-model="ctrl.sortOption">
+      <option>Top</option>
+      <option>Latest</option>
+      <option>Popular</option>
+    </select>
+  </div>
+<div class="w3-container">
+<img id="spinner" class="hidden" src="assets/spinner.gif">
+<sources-cards class="hidden" sources="ctrl.sources" get-articles="ctrl.getArticles(index);"></sources-cards>
+<articles-cards class="hidden" articles="ctrl.articles"></articles-cards>   
+</div>
+<button id="scrollTopBtn" ng-click="scrollTop()" class="btn btn-primary glyphicon glyphicon-chevron-up"></button>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="scripts/app.js"></script>
+</body>
+</html>
