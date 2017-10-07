@@ -1,9 +1,16 @@
+html{
+    font-family: Roboto 600;
+    font-size: 0.7em;
+}
+
 .logo{
     text-align: center;
     width: 32px;
     height: 32px;
-    margin-bottom: 1%;
+    margin-left: 1%;
+    margin-top: 1%;
 }
+
 body{
     width: 100%;
 }
@@ -15,6 +22,10 @@ body{
     height: 100%; 
     text-align: center;
     font-size: 14px;
+}
+
+.btn{
+    margin-bottom: 1%;
 }
 
 .hidden{
@@ -39,11 +50,6 @@ p{
     font-size: 1em!important;
 }
 
-#spinner{
-    width:10%;
-    height:auto;
-}
-
 #selectLabel{
 display: inline;
 }
@@ -54,15 +60,6 @@ display: inline;
     height: 5%;
     margin-left: auto;
     margin-right: auto;
-}
-
-#scrollTopBtn{
-    position: fixed;
-    top:94%;
-    right: 3%;
-    width: 42px;
-    float: right;
-    margin-bottom: 1%;
 }
 
 #sourcesCards{
@@ -77,6 +74,10 @@ display: inline;
     margin-left: auto;
     margin-right: auto;
     width:95%;
+}
+
+#spinner{
+    margin-top:3%;
 }
 
 .card {
@@ -135,13 +136,6 @@ display: inline;
 }
 }
 
-@media only screen and (max-width: 750px) {
-    #spinner{
-        width:15%;
-        height:auto;
-    }
-}
-
 @media only screen and (max-width: 575px) {
     .card-title{
         font-size: 1.2em;
@@ -155,10 +149,6 @@ display: inline;
     .btn {
         margin-left: auto;
         margin-right: auto;
-        width: 50%;
-    }
-    #spinner{
-        width:30%;
-        height:auto;
+        width: 80%;
     }
 }
