@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar style="padding-top:1.5em; padding-bottom:1.5em;" color="mainColor">
+    <ion-title>
+     Archived
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-list overflow-scroll="true">
+           <ion-item-sliding  class="card-shadow" *ngFor="let item of items" margin style="width:auto;">
+              <ion-item>
+                  <b><h4>{{item.title}}</h4></b>
+                  <p margin-top>{{item.description}}</p>
+              </ion-item>         
+              <ion-item-options side="right">
+                <button padding ion-button color="danger" (click)="deleteItem(item)"><ion-icon name="trash"></ion-icon>Delete</button>
+              </ion-item-options>
+            </ion-item-sliding>
+          </ion-list>   
+</ion-content>

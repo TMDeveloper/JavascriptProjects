@@ -1,0 +1,30 @@
+ 
+ <ion-header>
+      <ion-navbar style="padding:1.5em" color="mainColor">
+        <button ion-button menuToggle>
+          <ion-icon name='menu'></ion-icon>
+        </button>
+        <ion-title>
+          Things to Do!
+        </ion-title>
+      </ion-navbar>
+    </ion-header>
+    <ion-content>
+        <ion-list overflow-scroll="true">
+            <ion-item-sliding class="card-shadow" *ngFor="let item of items" margin style="width:auto;">
+              <ion-item padding (click)="viewItem(item)">
+                  {{item.title}}
+              </ion-item>         
+              <ion-item-options side="right">
+                  <button padding ion-button style="padding-right: 2em; padding-left: 2em;" color="primary" (click)="editItem(item)"><ion-icon name="checkbox-outline"></ion-icon>Edit</button>
+                <button padding ion-button color="danger" (click)="deleteItem(item)"><ion-icon name="trash"></ion-icon>Delete</button>
+              </ion-item-options>
+              <ion-item-options side="left">
+                <button padding ion-button color="secondary" (click)="archiveItem(item)"><ion-icon name="filing"></ion-icon>Archive</button>
+              </ion-item-options>
+            </ion-item-sliding>
+          </ion-list>      
+        <ion-fab right bottom>
+            <button margin-right margin-bottom ion-fab color="accentColor" (click)="addItem()"><ion-icon name="add"></ion-icon></button>
+          </ion-fab>
+    </ion-content>
