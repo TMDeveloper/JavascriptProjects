@@ -36,18 +36,18 @@
   function downloadImage () {  
             downloadBtn.href = canvas.toDataURL("image/jpeg");
             downloadBtn.download = "newPic.jpeg";   
-  };
+  }
 
   function revertImage () {
         return ctx.putImageData(original, 0, 0);
-  };
+  }
         
   function makePixelInverted(r, g, b, a) {
                 r = 255 - r;
                 g = 255 - g;
                 b = 255 - b;
                 return [r, g, b, a];
-    };
+    }
 
     function makePixelSepia(r, g, b, a) {
                 r = (0.393 * r) + (0.769 * g) + (0.189 * b);
@@ -63,7 +63,7 @@
                     b=255;
                 }
                 return [r, g, b, a];
-    };
+    }
 
     function makePixelChroma(r, g, b, a) {
                 var max;
@@ -74,7 +74,7 @@
                 else {
                     return [r, g, b, a];
                 }
-    };
+    }
 
     function makePixelGreyScale(r, g, b, a) {
                 var y;
@@ -83,7 +83,7 @@
                 g = y;
                 b = y;
                 return [r, g, b, a];
-    };
+    }
 
     function makePixelVibrant(r, g, b, a) {
                 var amt, avg, bs, gs, mx, rs;
@@ -94,7 +94,7 @@
                 gs = g + (amt * (mx - g));
                 bs = b + (amt * (mx - b));
                 return [rs, gs, bs, a];
-    };     
+    }     
     
   function manipulateImage(type){
         
@@ -184,7 +184,7 @@
             throw new ManipulationException('Image manipulation error');
             } 
         }//End of else   
-    };
+    }
     
     document.querySelector("#invert").onclick = function () {
     manipulateImage("invert");
