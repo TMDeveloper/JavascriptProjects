@@ -120,7 +120,7 @@
                 ctx.putImageData(imageData, 0, blockSize * index);
                 
                 finished++; 
-                if (finished === workersCount) {
+                if (finished == workersCount) {
                     var diff = new Date() - start;
                     timer.textContent = "Process done in " + diff + " ms";
                 }
